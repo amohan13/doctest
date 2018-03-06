@@ -1,0 +1,273 @@
+ Bootstrap
+?	Bootstrap is a free and open-source framework for creating websites and web applications.
+?	Bootstrap can make things a lot easier. Bootstrap enables you to create responsive websites without you needing to put in much effort.
+?	Responsive means a web site which automatically adjust itself to look good on all devices, from small phones to large desktops.
+?	Bootstrap includes components such as buttons, navbars, dropdown menus, alert boxes, and more. In most cases, you can make use of a component simply by using the appropriate class name.
+
+
+Why Bootstrap?
+?	Mobile first approach: this means that it is primarily designed for mobile devices, then scaled up from there to desktop.
+?	Easy to get started: With just the knowledge of HTML and CSS anyone can get started with bootstrap. Bootstrap official site can help you with documentation.
+?	Responsive design: Bootstrap's responsive CSS adjusts to Desktops, Tablets and Mobiles. 
+?	It contains beautiful and functional built-in components which are easy to customize.
+?	 It also provides web-based customization. 
+?	And best of all it is an open source.
+
+What to do first
+?	Bootstrap uses its own CSS and JavaScript files, which you need to link to.
+?	Copy-paste the stylesheet link into your <head>  before all other stylesheets to load our CSS.
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+?	Then place the following javascript files at the bottom of your document just before the end of <body> tag.
+?	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+?	<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+?	<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+?	<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ 
+
+
+
+
+
+Bootstrap Grid System
+Here's how the Bootstrap grid system works:
+?	Rows must be placed within a .container class for proper alignment and padding. Use rows to create horizontal groups of columns. 
+?	Content should be placed within the columns.
+?	 Predefined grid classes like .row and .col-4 are available for quickly making grid layouts.
+?	Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and the last column via negative margin on .rows.
+?	Grid columns are created by specifying the number of twelve available columns .
+?	For example, three equal columns would use three .col-sm-4.
+Basic Structure
+        <div class="container">
+             <div class="row">
+	           <div class="col-xl-1">col1</div>
+	           <div class="col-lg-1">col2</div>
+	         <div class="col-md-1">col3</div>
+	        <div class="col-sm-1">col4</div>
+             </div>
+      </div>
+   
+?	Here  xl- extra large 
+           lg- large
+           md- medium
+           sm- small
+?	These are the size of the grid present in bootstrap.
+
+
+Bootstrap Typography
+Bootstrap includes styles that define how text elements appear.
+1.	Headings
+?	 there are headings from h1 to h6 similar to that which are found in html
+?	Subheadings
+?	 To add an inline subheading to any of the headings, simply add .small class and you will get smaller text in a lighter color.
+?	Eg.
+<h1>Heading 1 <small>Sub-heading</small></h1>
+<h2>Heading 2 <small>Sub-heading</small></h2>
+<h3>Heading 3 <small>Sub-heading</small></h3>
+<h4>Heading 4 <small>Sub-heading</small></h4>
+<h5>Heading 5 <small>Sub-heading</small></h5>
+<h6>Heading 6 <small>Sub-heading</small></h6>
+
+     2. Display headings 
+?	These are designed to stand out more than the normal headings. There are 4 sizes of display heading (.display-1, .display-2, .display-3, .display-4)
+?	Eg.
+     <h1 class="display-1">Display 1</h1> 
+     <h1 class="display-2">Display 2</h1>
+     <h1 class="display-3">Display 3</h1>
+     <h1 class="display-4">Display 4</h1>
+
+Table
+?	For a basic table with lightly padded cells and horizontal dividers, apply Bootstrap’s .table of the <table> element
+?	Eg.
+      <table class="table">
+            <thead>
+       <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+       </tr>
+          </thead>
+          <tbody>
+     <tr>
+        <td>Cell</td>
+        <td>Cell</td>
+   </tr>     
+         </tbody>
+    </table>
+
+
+
+
+Buttons
+?	Anything that is given a class of .btn will inherit the default look of a gray button with rounded corners. 
+?	Here are different classes and their descriptions 
+?	btn: Default/Standard button.
+?	btn-primary: Provides extra visual weight and identifies the primary action in a set of buttons
+?	btn-success: Indicates a successful or positive action.
+?	btn-info: Contextual button for informational alert messages.
+?	btn-warning: Indicates caution should be taken with this action.
+?	btn-danger: Indicates a dangerous or potentially negative action.
+?	btn-link: Deemphasize a button by making it look like a link while maintaining button behavior.
+
+
+
+
+
+Form 
+?	Bootstrap makes it easy with the simple HTML markup and extended classes for different styles of forms.
+?	.form-control with <input> and <textarea> are used.
+?	.form-group is used for optimum spacing. 
+?	Eg.
+     <form  
+         action="/html/tags/html_form_tag_action.cfm">
+         <fieldset class="form-group">
+              <label for="first_name">First Name</label>
+                    <input type="text" class="form-control" 
+                       id="first_name” name="first_name">
+         </fieldset>                     
+               <button type="submit" class="btn 
+                  btn-default">Submit</button>
+     </form>
+
+
+
+
+Examples
+?	<!--Standard button-->
+         <button type="button" class="btn  
+          btn-default">Default button</button>
+?	<!--Provides extra visual weight and identifies the primary action in a set of buttons-->
+      <button type="button" class="btn 
+       btn-primary">Primary Button</button>
+?	<!--Indicates a successful or positive action-->
+<button type="button" class="btn btn-success">Success Button</button>
+
+Similarly you can use different classes 
+
+
+
+
+
+
+
+
+Navbars
+?	Navbar means navigation bar. Bootstrap helps you to style navigation bar. 
+?	Eg.
+       <nav class="navbar navbar-expand-sm navbar-light 
+         bg-faded">
+             <button class="navbar-toggler" type="button" 
+                data-target="#nav-content" aria-controls
+                  ="nav-content" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Brand -->
+             <a class="navbar-brand" href="#">Logo</a>
+             <!-- Links -->
+     	      <div class="collapse navbar-collapse" 
+                 id="nav-content">  
+                   <ul class="navbar-nav">
+                         <li class="nav-item">
+                              <a class="nav-link" href="#">Link  
+                                  1</a>
+  
+                         </li>
+                         <li class="nav-item">
+                               <a class="nav-link" href="#">Link 
+                                  2</a>
+                         </li>
+   <li class="nav-item">
+          <a class="nav-link" href="#">Link 
+             3</a>
+   </li>
+   </ul>
+  </div>
+</nav>
+
+
+
+
+
+DropDown
+?	Can include dropdown in navbar
+        <nav>
+               <ul>
+             <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"   
+                      data-toggle="dropdown"  
+                      id="Preview" href="#" role="button"  
+                      aria-haspopup="true"  
+                      aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu"    
+                       aria-labelledby="Preview">
+     
+<a class="dropdown-item"  href="#">Dropdown Link 1</a>
+<a class="dropdown-item" href="#">Dropdown Link 2</a>
+<a class="dropdown-item" href="#">Dropdown Link 3</a>
+</div>
+                      </li>
+               </ul>
+     </nav>
+Jumbotron
+?	A jumbotron is a large box that is styled with large text. By default, Bootstrap 4 jumbotrons are styled in light gray, but you can change this to any color.
+?	To create a jumbotron, apply the .jumbotron.
+?	Eg.
+         <div class="container">
+              <div class="jumbotron">
+                   <h1>My Jumbotron</h1>
+                         <p>Think BIG with a Bootstrap 
+                           Jumbotron!</p>
+                </div>
+        </div>
+
+
+
+
+Cards
+?	A card is a container in which you can place any content. 
+?	Styling options  such as alignment, padding, colors, headings, and more.
+?	To create a basic card, apply the .card and .card-body classes.
+?	Add .card-title to any heading elements and .card-text to text elements
+?	Eg.
+           <div class="card card-body">
+     <h4 class="card-title">Boot Polish</h4>
+     <p class="card-text">Boot polish is used to 
+        give shine to your shoes</p>
+     <a href="#" class="btn btn-primary">
+         More</a>
+          </div>
+
+
+Carousel
+?	The Bootstrap carousel component enables you to add scrolling images and text that slide in, pause, then slide out. 
+?	Controls enable the user to scroll forwards or backwards. 
+?	Eg.
+           <div id="myCarousel" class="carousel slide w-50    
+                    ml-auto mr-auto"  data-ride="carousel">
+                      <div class="carousel-inner" role="listbox">
+                             <div class="carousel-item active">
+                                     <img class="d-block w-100" 
+                                       src="/pix/samples/27m.jpg"
+                                              alt="First slide">
+                             </div>
+                   <div class="carousel-item">
+                            <img class="d-block w-100"  
+                            src="/pix/samples/28m.jpg" alt="Second 
+                       slide"> 
+                 </div>
+          </div>
+
+
+ Refer
+	
+
+
+
