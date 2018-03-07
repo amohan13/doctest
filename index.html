@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	</head>
 	<body>
-  <p>Please Click Here To Make a Ajax Call</p>
+		<div style="border: 1px solid black">
+  <p >Please Click Here To Make a Ajax Call</p>
   	<h4 id="ajax"></h4>
+  	<h4 id="data"></h4>
 	<button onclick="getData()">Request</button>
+</div>
 
 
 	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -27,6 +30,7 @@
 						var myArr=JSON.parse(this.responseText);
 						var dataObj=JSON.stringify(myArr);
 						document.getElementById('ajax').innerHTML=dataObj;
+					
 					}
 				};
 			}

@@ -1,7 +1,6 @@
 var fs=require('fs');
 var natural = require('natural');
-
-
+var path = require("path");
 
 //defining the object for json
 var result={};
@@ -21,7 +20,7 @@ var testVerbCount=0;
 var testAdjCount=0; 
 
 
-var path = require("path");
+
 var base_folder = path.join(path.dirname(require.resolve("natural")), "brill_pos_tagger");
 var rulesFilename = base_folder + "/data/English/tr_from_posjs.txt";
 var lexiconFilename = base_folder + "/data/English/lexicon_from_posjs.json";
@@ -118,6 +117,7 @@ function matching(tokenbase,tokentest){
        var match_result=((non_matching-matching)/non_matching)*100
        console.log("Matched: "+match_result);
        result.match['matching']=match_result;
+      
 }
  
 
