@@ -96,14 +96,14 @@ function wordCount(str){
 
 //matching percentage of files
 function matching(tokenbase,tokentest){
-	var match=0;
-    var matches=0;
+	var non_matching=0;
+    var matching=0;
     for (var i = 0; i < tokenbase.length; i++)
     {
 	              
         if(tokenbase.indexOf(tokentest[i],0)===-1)
             { 
-               match++;
+               non_matching++;
             }
     }  
     for (var i = 0; i < tokentest.length; i++)
@@ -111,32 +111,33 @@ function matching(tokenbase,tokentest){
 	              
         if(tokentest.indexOf(tokenbase[i],0)===-1)
             { 
-                matches++;
+                matching++;
             }
 
     }  
-    if(match>matches)
-    {
-       var pre=((match-matches)/match)*100
-       console.log("Matched: "+pre);
-       result.match['matching']=pre;
-    }
+       var match_result=((non_matching-matching)/non_matching)*100
+       console.log("Matched: "+match_result);
+       result.match['matching']=match_result;
 }
  
 
 //matching the base part with dictionary
 var dictionary=fs.readFileSync('./dictionary.txt','utf8');
 var split_dic=dictionary.split(/\W+/);
-c=0;
+var same_keys_test=0,same_keys_base=0;
 for(var j=0;j<split_dic.length;j++){
     for(var i=0;i<testTokens.length;i++){
 		if(split_dic[j]==testTokens[i]){
-			c++;
+			same_keys_test++;
 		}
+    if(split_dic[j]==baseTokens[i]){
+      same_keys_base++;
+    }
 	}
 }
-console.log("spelling: "+ c);
-result.spell['spelling']=c;
+console.log("spelling: "+ same_keys_base);
+result.spell['same_keys_in_base']=same_keys_base;
+result.spell['same_keys_in_test']=same_keys_test;
 
     var json= JSON.stringify(result,null,2);
     fs.writeFile('output.json',json,'utf8',(err)=>{

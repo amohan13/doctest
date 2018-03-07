@@ -1,18 +1,21 @@
 {
   "base_document": {
-    "word_count": 1352,
+    "word_count": 1356,
     "noun_count": 425,
     "verb_count": 139,
     "adjective_count": 99
   },
   "test_document": {
-    "word_count": 1653,
+    "word_count": 1655,
     "noun_count": 537,
     "verb_count": 131,
     "adjective_count": 100
   },
-  "match": {},
+  "match": {
+    "matching": -79.1891891891892
+  },
   "spell": {
-    "spelling": 0
+    "same_keys_in_base": 42,
+    "same_keys_in_test": 14
   }
 }
